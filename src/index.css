@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* Class-based dark mode (Tailwind v4 defaults to media-query based) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Space Grotesk", "Space Grotesk Fallback", sans-serif;
+  --font-sans: "Inter", "Inter Fallback", sans-serif;
+
+  /* Periwinkle accent — used sparingly for links, buttons, highlights */
+  --color-periwinkle: #7c8aff;
+  --color-periwinkle-light: #8b93f5;
+
+  /* Deep neutral bases, tinted toward periwinkle's hue rather than pure black/white */
+  --color-base-dark: #0f0f14;
+  --color-base-dark-raised: #16161d;
+  --color-base-light: #f7f7fb;
+  --color-base-light-raised: #ffffff;
+
+  /* Secondary/muted purple — borders, subtle fills, secondary actions */
+  --color-muted: #b4b9f0;
+  --color-muted-light: #c4c8f7;
+
+  /* Deep contrast purple — heavier text, hover-darkened states */
+  --color-contrast: #4b4e9e;
+  --color-contrast-dark: #3d3f82;
+
+  /* Tinted neutral grays (never pure gray) */
+  --color-ink-100: #e4e4ec;
+  --color-ink-200: #d4d4e0;
+  --color-ink-400: #8a8a99;
+  --color-ink-600: #5c5c6b;
+
+  /* Warm accent, used sparingly for CTAs / one highlight */
+  --color-amber: #f5a97c;
+  --color-amber-dark: #e08a58;
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-base-light text-contrast-dark dark:bg-base-dark dark:text-ink-100;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background-color: var(--color-periwinkle);
+    color: var(--color-base-dark);
+  }
+
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Lenis smooth-scroll requires overflow control to be handed off to it */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth scroll-behavior {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
