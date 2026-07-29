@@ -106,46 +106,46 @@ export function Contact() {
         </div>
 
         <div className="flex flex-wrap items-center gap-3">
-          <a
-            href={`tel:${site.phone}`}
-            className="group flex items-center gap-3 rounded-md border border-ink-200 px-5 py-3 transition-colors hover:border-periwinkle dark:border-white/15 dark:hover:border-periwinkle-light"
-          >
-            <span className="font-display text-lg font-medium text-contrast-dark dark:text-ink-100">
+          <div className="group flex items-center gap-3 rounded-md border border-ink-200 px-5 py-3 transition-colors hover:border-periwinkle dark:border-white/15 dark:hover:border-periwinkle-light">
+            <a
+              href={`tel:${site.phone}`}
+              className="font-display text-lg font-medium text-contrast-dark dark:text-ink-100"
+            >
               {site.phoneDisplay}
-            </span>
-          </a>
-          <button
-            type="button"
-            onClick={handleCopyPhone}
-            aria-label="Copy phone number"
-            className="flex h-12 w-12 items-center justify-center rounded-md border border-ink-200 text-ink-600 transition-colors hover:border-periwinkle hover:text-periwinkle dark:border-white/15 dark:text-ink-400 dark:hover:border-periwinkle-light dark:hover:text-periwinkle-light"
-          >
-            <AnimatePresence mode="wait" initial={false}>
-              {copiedPhone ? (
-                <motion.span
-                  key="check"
-                  initial={{ scale: 0.5, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.5, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex"
-                >
-                  <Check size={15} />
-                </motion.span>
-              ) : (
-                <motion.span
-                  key="copy"
-                  initial={{ scale: 0.5, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.5, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex"
-                >
-                  <Copy size={15} />
-                </motion.span>
-              )}
-            </AnimatePresence>
-          </button>
+            </a>
+            <button
+              type="button"
+              onClick={handleCopyPhone}
+              aria-label="Copy phone number"
+              className="flex h-6 w-6 items-center justify-center text-ink-600 transition-colors hover:text-periwinkle dark:text-ink-400 dark:hover:text-periwinkle-light"
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {copiedPhone ? (
+                  <motion.span
+                    key="check"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex"
+                  >
+                    <Check size={15} />
+                  </motion.span>
+                ) : (
+                  <motion.span
+                    key="copy"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex"
+                  >
+                    <Copy size={15} />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </button>
+          </div>
 
           <AnimatePresence>
             {copiedPhone && (
