@@ -14,7 +14,9 @@ export const site = {
     "I write backend systems and full-stack apps for small and mid-size businesses — the kind of software that has to actually work, every day, with no one watching over it. Most of what I build runs quietly in production: automated messaging, client sites, internal tools. I like scoping a problem myself, shipping it, and being the one who gets the call if it breaks.",
 
   location: "EDIT ME — City, State", // e.g. "Charlotte, NC"
-  email: "you@example.com", // EDIT ME — used on the Contact page and as a mailto: link
+  email: "joshua.s.gilliam@icloud.com",
+  phone: "+15403085315",
+  phoneDisplay: "+1 (540) 308-5315",
 
   // Optional resume download. Drop a PDF in /public and point this at it, or leave null to hide the link.
   resumeUrl: null,
@@ -22,7 +24,7 @@ export const site = {
   // Rendered on the Contact page (and optionally elsewhere) via <SocialLink />.
   // `icon` keys map to lucide-react icons in components/ui/SocialLink.jsx.
   socials: [
-    { label: "Email", url: "mailto:you@example.com", icon: "mail" }, // EDIT ME
+    { label: "Email", url: "mailto:joshua.s.gilliam@icloud.com", icon: "mail" },
     { label: "GitHub", url: "https://github.com/Foolystaycooly", icon: "github" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/joshua-gilliam-458466380?utm_source=share_via&utm_content=profile&utm_medium=member_ios", icon: "linkedin" },
   ],
