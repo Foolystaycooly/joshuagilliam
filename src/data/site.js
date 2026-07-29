@@ -2,7 +2,7 @@
 // edit this file rather than hunting through JSX to update copy.
 
 export const site = {
-  name: "Joshua Gilliam", // EDIT ME if this isn't right
+  name: "Joshua Gilliam",
   role: "Software Developer",
 
   // One-liner used on the Home hero.
@@ -13,7 +13,7 @@ export const site = {
   intro:
     "I write backend systems and full-stack apps for small and mid-size businesses — the kind of software that has to actually work, every day, with no one watching over it. Most of what I build runs quietly in production: automated messaging, client sites, internal tools. I like scoping a problem myself, shipping it, and being the one who gets the call if it breaks.",
 
-  location: "EDIT ME — City, State", // e.g. "Charlotte, NC"
+  location: "Virginia",
   email: "joshua.s.gilliam@icloud.com",
   phone: "+15403085315",
   phoneDisplay: "+1 (540) 308-5315",

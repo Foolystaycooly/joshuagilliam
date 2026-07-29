@@ -12,11 +12,11 @@ export const projects = [
     title: "ResponsePro",
     tagline: "Compliance-focused SMS automation for home service businesses",
     description:
-      "Compliance-focused SMS automation for home service businesses — solo-built and running in production. Handles real customer-facing messaging under real regulatory constraints (10DLC registration, opt-in/opt-out, carrier filtering), not a weekend prototype. I own the infrastructure end to end: it has to stay up, stay compliant, and keep working when I'm not looking at it.",
-    tech: ["EDIT ME", "EDIT ME", "EDIT ME"], // e.g. "Node.js", "Twilio", "PostgreSQL"
+      "Solo-built SaaS in production for home service businesses — missed-call text-back, 10DLC compliance, and automated follow-ups under real TCPA constraints. Stripe checkout triggers an eight-step Telnyx auto-provisioning pipeline; inbound SMS routes through a Postgres-backed queue with rate limiting and carrier vetting. Express API on Render, React dashboard on Cloudflare Pages, edge intake on Cloudflare Workers.",
+    tech: ["Node.js", "PostgreSQL", "Telnyx", "Stripe", "Cloudflare Workers"],
     image: "/images/projects/responsepro.png",
     liveUrl: "https://responsepro.app",
-    repoUrl: null, // EDIT ME
+    repoUrl: null,
     featured: true,
   },
   {
@@ -24,8 +24,8 @@ export const projects = [
     title: "shermlandscaping.com",
     tagline: "Client website build for a landscaping business",
     description:
-      "A full client site build for a landscaping business, handled solo from initial scope through launch — design, build, content, and deployment. Built to be fast, easy for a non-technical owner to maintain, and to actually generate leads rather than just look good.",
-    tech: ["EDIT ME", "EDIT ME"], // e.g. "React", "Tailwind CSS"
+      "Full client site from scope through launch — React 19 static site generation, flat prerendered routes, LocalBusiness JSON-LD, and a custom postbuild pipeline that externalizes inline scripts and emits Cloudflare CSP headers. Contact forms POST to a live API with honeypot spam protection. Built for speed, SEO, and a non-technical owner who can run it without me.",
+    tech: ["React", "TypeScript", "Vite SSG", "Cloudflare Pages"],
     image: "/images/projects/shermlandscaping.png",
     liveUrl: "https://shermlandscaping.com",
     repoUrl: null,
