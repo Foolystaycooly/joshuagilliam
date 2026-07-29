@@ -24,6 +24,6 @@ export const site = {
   socials: [
     { label: "Email", url: "mailto:you@example.com", icon: "mail" }, // EDIT ME
     { label: "GitHub", url: "https://github.com/Foolystaycooly", icon: "github" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/joshua-gilliam-458466380/", icon: "linkedin" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/joshua-gilliam-458466380?utm_source=share_via&utm_content=profile&utm_medium=member_ios", icon: "linkedin" },
   ],
 };
