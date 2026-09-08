@@ -19,7 +19,7 @@ export const site = {
   phoneDisplay: "+1 (540) 308-5315",
 
   // Optional resume download. Drop a PDF in /public and point this at it, or leave null to hide the link.
-  resumeUrl: null,
+  resumeUrl: "/Joshua-Gilliam-Resume.pdf",
 
   // Rendered on the Contact page (and optionally elsewhere) via <SocialLink />.
   // `icon` keys map to lucide-react icons in components/ui/SocialLink.jsx.

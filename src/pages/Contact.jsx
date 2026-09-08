@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check, Copy } from "lucide-react";
+import { Check, Copy, Download } from "lucide-react";
 import { site } from "../data/site";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { SocialLink } from "../components/ui/SocialLink";
@@ -160,6 +160,22 @@ export function Contact() {
             )}
           </AnimatePresence>
         </div>
+
+        {site.resumeUrl && (
+          <div className="flex flex-wrap items-center gap-3">
+            <motion.a
+              href={site.resumeUrl}
+              download
+              whileHover={{ y: -2 }}
+              whileTap={{ y: 0 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              className="inline-flex items-center gap-2 rounded-md border border-ink-200 px-5 py-3 text-sm font-semibold text-contrast-dark transition-colors hover:border-periwinkle hover:text-periwinkle dark:border-white/15 dark:text-ink-100 dark:hover:border-periwinkle-light dark:hover:text-periwinkle-light"
+            >
+              Download resume
+              <Download size={15} strokeWidth={2} />
+            </motion.a>
+          </div>
+        )}
       </motion.div>
 
       <motion.div

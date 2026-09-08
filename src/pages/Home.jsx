@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { site } from "../data/site";
 import { featuredProjects } from "../data/projects";
 import { SectionHeading } from "../components/ui/SectionHeading";
@@ -24,6 +24,7 @@ const heroItem = {
 };
 
 const MotionLink = motion.create(Link);
+const MotionAnchor = motion.a;
 
 export function Home() {
   return (
@@ -75,6 +76,19 @@ export function Home() {
             >
               Get in touch
             </MotionLink>
+            {site.resumeUrl && (
+              <MotionAnchor
+                href={site.resumeUrl}
+                download
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                className="inline-flex items-center gap-2 rounded-md bg-amber px-5 py-2.5 text-sm font-semibold text-base-dark transition-colors hover:bg-amber-dark"
+              >
+                Download resume
+                <Download size={15} strokeWidth={2} />
+              </MotionAnchor>
+            )}
           </motion.div>
         </motion.div>
       </section>
