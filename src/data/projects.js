@@ -31,6 +31,18 @@ export const projects = [
     repoUrl: null,
     featured: true,
   },
+  {
+    id: "holsteinasphaltcare",
+    title: "holsteinasphaltcare.com",
+    tagline: "Client site for asphalt driveway repair and seal coating",
+    description:
+      "Marketing site for a Locust Grove, Virginia asphalt contractor — crack repair, filling, and seal coating with a clear quote path for homeowners. React 19 SSG with content-driven pages, FAQ schema on services, and dual contact flows (general inquiry + structured quote request) posting to a live API. Lazy-loaded Leaflet map shows the ~15-mile service radius only when scrolled into view.",
+    tech: ["React", "TypeScript", "Leaflet", "Vite SSG"],
+    image: "/images/projects/holsteinasphaltcare.png",
+    liveUrl: "https://holsteinasphaltcare.com",
+    repoUrl: null,
+    featured: true,
+  },
 
   // --- Template: copy this block to add another project. ---
   // {
